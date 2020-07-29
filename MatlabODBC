@@ -1,0 +1,6 @@
+datasource = "mysql80";
+username = "teacher";
+password = "dysystem2020";
+conn = database(datasource, username, password);
+
+close(conn);
