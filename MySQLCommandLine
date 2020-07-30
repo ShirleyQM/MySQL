@@ -1,0 +1,4 @@
+net start mysql80
+mysql -uroot -p
+/*enter the password*/
+
