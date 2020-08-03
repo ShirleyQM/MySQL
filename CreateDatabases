@@ -19,14 +19,6 @@ CREATE TABLE structure
 )ENGINE = INNODB;
 
 
-/*******************coordinate**********************/
-CREATE TABLE coordinate
-(
-  locid_sk SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  loc1 SMALLINT NOT NULL,
-  loc2 SMALLINT NOT NULL
-)ENGINE = INNODB;
-
 /*                                                */
 /*                   fact tables                  */
 /*                                                */
@@ -224,7 +216,8 @@ CREATE TABLE detail
 (
   dtlid BIGINT PRIMARY KEY AUTO_INCREMENT,
   mid BIGINT NOT NULL,
-  locid_sk SMALLINT NOT NULL,
+  loc1 SMALLINT NOT NULL,
+  loc2 SMALLINT NOT NULL，
   hh DECIMAL(8,2) NOT NULL,
   dc DECIMAL(8,2) NOT NULL,
   la DECIMAL(8,2) NOT NULL,
