@@ -1,0 +1,30 @@
+USE item;
+
+UPDATE structure 
+SET diameter = 300,
+    width = 200,
+    height = 30,
+    nrow = 8,
+    ncol = 12,
+    nchamber = 96 
+WHERE sid_sk == 1;
+
+INSERT INTO structure (sid_sk, diameter, width, height, nrow, ncol, nchamber)
+VALUES (NULL, 300, 200, 50, 8, 12, 96),
+       (NULL, 300, 200, 80, 8, 12, 96);
+      
+      
+/*------------UPDATE material--------------*/
+/*
+UPDATE material
+SET sid_sk = 1 
+WHERE mid <= 3300;
+*/
+
+UPDATE material 
+SET sid_sk = 2 
+WHERE mid BETWEEN 3301 AND 6600;
+
+UPDATE material 
+SET sid_sk = 3 
+WHERE mid >= 6601;
